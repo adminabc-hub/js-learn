@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+		.box{
+			width:400px;
+			height:400px;
+			text-align:center;
+			line-height:400px;
+			background-color:pink;
+			margin:10px auto;
+		}
+    </style>
+</head>
+<body>
+	<!-- 1、创建一个高400px 宽400px的盒子 -->
+    <div class="box">1</div>
+	
+	<script>
+		function createBox(textItem){
+			const divBox=document.createElement('div');
+			
+			//给div添加一个类名 "box2"
+			divBox.className='box2';
+			//设置样式属性
+			divBox.style.width='400px';
+			divBox.style.height='400px';
+			divBox.style.backgroundColor='lightblue';
+			divBox.style.textAlign="center";
+			divBox.style.lineHeight="400px";
+			divBox.style.margin="10px auto";
+			//给div盒子添加文字
+			divBox.textContent=textItem;
+			//添加到文档中
+			document.body.appendChild(divBox);
+		}
+		
+		createBox("this is javascript create box!");
+	</script>
+</body>
+</html>
