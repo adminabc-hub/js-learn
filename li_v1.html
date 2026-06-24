@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+			margin:0;
+			padding:0;
+		}
+		
+		li {
+			<!-- 清理li默认属性 -->
+			list-style:none;
+		}
+		
+		ul {
+			margin:10px 0;
+			padding-top:5px;
+			padding-bottom:5px;
+			background-color:blue;
+			overflow:hidden;
+		}
+		
+		ul>li {
+			float:left;
+			width:100px;
+			height:100px;
+			background-color:red;
+			margin-left:5px;
+			margin-right:5px;
+			line-height:100px;
+			text-align:center;
+			border-radius:10px;
+		}
+		
+		ul>li:hover {
+			font-size:40px;
+			color:white;
+		}
+    </style>
+</head>
+<body>
+	<!-- 1、设置li元素 宽100px、高100px、背景：红，字体垂直、水平居中，左 右外边距5px -->
+	<!-- 2、设置ul 块级元素 上下外边距10px，上下内边边距5px，背景：蓝色，清理浮动 -->
+    <ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+	</ul>
+</body>
+</html>
