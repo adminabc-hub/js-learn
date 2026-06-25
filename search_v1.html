@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding: 0;
+			box-sizing: border-box;/*css3的盒子模型，不写的话，下面input[type="text"] 会高度溢出父元素的高度*/
+		}
+		
+		#header {
+			width:800px;
+			height:50px;
+			background-color:pink;
+			margin:5px auto;/*水平居中*/
+		}
+		form {
+			width:400px;
+			height:100%;
+			margin:0 auto;/*form 是块级元素，给了度和高后 才能使用margin水平居中*/
+		}
+		form input[ type="text"] {
+			float:left;/*左浮动*/
+			width:300px;
+			height:100%;
+			text-align:center;/*文字居中*/
+			vertical-align: middle;/*input 属于行内块元素，默认 vertical-align: baseline 会在底部产生几像素的空白间隙，也会加剧视觉上的溢出,所以设置middle*/
+			bolder-right:none;
+			outline:none;
+			border-top-left-radius:10px;
+			border-bottom-left-radius:10px;
+		}
+		
+		form input[type="submit"] {
+			float:left;/*左浮动*/
+			width:100px;
+			height:100%;
+			border-left:none;
+			border-top-right-radius:10px;
+			border-bottom-right-radius:10px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<!--
+	1、input[type="xxx"] 是css属性选择器
+	2、input[type="text"]、input[type="submint"] 两元素排成一排 贴合一起，需要浮动起来
+	3、form元素先设置height:100%后 里面input文本框才能设置height:100%，是继承父元素属性
+	4、box-sizing: border-box; css3的盒子模型，不写的话，下面input[type="text"] 会高度溢出父元素的高度
+	--->
+    <div id="header">
+		<form>
+			<input type="text" placeholder="请输入内容！" >
+			<input type="submit">
+		</form>
+	</div>
+</body>
+</html>
