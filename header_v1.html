@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑";
+            /*字体样式*/
+            font-size: 14px;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .header {
+            width: 1000px;
+            height: 50px;
+            /* background-color: pink; */
+            margin: 5px auto;/*居中*/
+        }
+
+        .nav{/*导航栏样式开始*/
+            float:left;
+        }
+        
+        .nav li {
+            float: left;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: rgb(221, 221, 224);
+            color: rgb(26, 25, 25);
+            cursor: pointer;
+            transition: all 0.3s ease;/*过渡效果*/
+        }
+
+        .nav li:hover {
+            background-color: red;
+            transform: scale(1.1);/*放大1.1倍*/
+        }
+        /*导航栏样式结束*/
+
+        form {
+            float:left;
+        }
+        input[type="text"] {
+            float: left;
+            width:250px;
+            height: 40px;
+            margin: 5px;
+            outline: none;
+            margin-right: 0;
+            border-right: 0;
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            float:left;
+            width: 80px;
+            height: 40px;
+            margin: 5px;
+            margin-left: 0;
+            border-left: 0;
+            background-color: rgb(221, 221, 224);
+            cursor: pointer;
+        }
+
+        
+        .right{/*右侧内容开始*/
+            width: 150px;
+            height: 50px;
+            float:right;
+            background-color: rgb(221, 221, 224);
+        }
+
+        .account {
+            float:left;
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
+
+        .account:hover {
+            background-color: red;
+            color: white;
+        }
+
+        .right img {
+            float:left;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+        /*右侧内容结束*/
+    </style>
+</head>
+<body>
+    <div class="header">
+        <ul class="nav">
+            <li>菜单1</li>
+            <li>菜单2</li>
+            <li>菜单3</li>
+        </ul>
+        <form action="">
+            <input type="text" placeholder="请输入内容">
+            <input type="submit" value="提交">
+        </form>
+        <div class="right">
+            <div class="account">账户名</div>
+            <img src="./image/account1.png" alt="头像">
+        </div>
+    </div>
+</body>
+</html>
